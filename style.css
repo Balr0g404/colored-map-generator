@@ -1,0 +1,54 @@
+
+.red{
+  fill: red !important;
+}
+
+.green{
+  fill: green !important;
+}
+
+.yellow{
+  fill: yellow !important;
+}
+
+.orange{
+  fill: orange !important;
+}
+
+.bbutton {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: linear-gradient(45deg,#5334f5,#9c6fff);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,.15);
+  transition: .8s cubic-bezier(.2,1,.2,1);
+  cursor: pointer;
+}
+
+.text{
+  width: 100%;
+}
+
+.entete{
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,.15);
+  background: linear-gradient(45deg,#5334f5,#9c6fff);
+}
+
+.footer{
+  text-align: center;
+}
+
+.map{
+  padding: 10px;
+  margin: 10px;
+  background-color: #e3dede;
+  border: noene;
+  border-radius: 3rem;
+}

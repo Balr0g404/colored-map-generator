@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+      <meta charset="utf-8">
+      <title>Mappemonde</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 entete"><h1>Colored Map Generator</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 map">
+        <object id="svg" type="image/svg+xml" data="world.svg"></object>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-9 text">
+          <textarea id="jsoninput" name="input" rows="8" cols="90" placeholder="Placez ici un json"></textarea>
+        </div>
+        <div class="col-lg-3 bouton">
+          <button id="send" type="button" name="button" class="bbutton">Click</button>
+       </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-lg-12 footer">Pied de page</div>
+      </div> -->
+    </script>
+    <script src="../jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
