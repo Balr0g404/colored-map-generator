@@ -1,35 +1,117 @@
 <!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
   <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-      <link rel="stylesheet" href="style.css">
-      <meta charset="utf-8">
-      <title>Mappemonde</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Map Generator</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 entete"><h1>Colored Map Generator</h1></div>
+
+    <!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center"><img src="img/terre.jpg" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+      <div class="media-body">
+        <h4 class="m-0">Colored map</h4>
+        <p class="font-weight-light text-muted mb-0">auto-generated</p>
       </div>
-      <div class="row">
-        <div class="col-lg-12 map">
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Menu</p>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic bg-light">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Home
+            </a>
+    </li>
+    <li class="nav-item">
+      <div>
+        <a href="#" id="pop1" class="nav-link text-dark font-italic popup_open">
+          <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+          Values
+        </a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <div>
+        <a href="#" id="pop2" class="nav-link text-dark font-italic popup_open">
+          <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+          Upload
+        </a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark font-italic" id="dl">
+                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                Download
+            </a>
+    </li>
+  </ul>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <!-- à laisser vide pour ne pas casser la mise en page -->
+  </ul>
+</div>
+<!-- End vertical navbar -->
+
+
+<!-- main page -->
+<div class="page-content p-5" id="content">
+
+  <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Menu</small></button>
+
+  <h2 class="display-4 text-white">Colored Worldmap</h2>
+  <p class="lead text-white mb-0">Build a colored world map depending on the values given.</p>
+
+  <div class="separator"></div>
+  <div class="row text-white">
+    <div class="col-lg-12">
+      <div class="bg-white p-5 rounded my-5 shadow-sm map">
         <object id="svg" type="image/svg+xml" data="world.svg"></object>
-        </div>
       </div>
-      <div class="row">
-        <div class="col-lg-9 text">
-          <textarea id="jsoninput" name="input" rows="8" cols="90" placeholder="Placez ici un json"></textarea>
-        </div>
-        <div class="col-lg-3 bouton">
-          <button id="send" type="button" name="button" class="bbutton">Click</button>
-       </div>
-      </div>
-      <!-- <div class="row">
-        <div class="col-lg-12 footer">Pied de page</div>
-      </div> -->
-    </script>
-    <script src="../jquery-3.4.1.min.js" charset="utf-8"></script>
-    <script src="main.js" charset="utf-8"></script>
+
+    </div>
+  </div>
+
+</div>
+<!-- end main page -->
+
+<!-- popups -->
+<div id="popup1">
+  <div class="mypop" id="pop">
+    <div class="text">
+      <p>Enter a <b>JSON</b> file to color the map</p>
+      <textarea id="jsoninput" class="txt" placeholder="Convert a JSON file to colored map" name="name" rows="8" cols="80"></textarea>
+    </div>
+    <button id="send" type="button" name="button" class="bbutton">Click</button>
+  </div>
+</div>
+
+<div id="popup2">
+  <div class="mypop" id="pop">
+    <div class="text">
+      <textarea class="txt" name="name" rows="8" cols="80"></textarea>
+    </div>
+    <button type="button" name="button" class="bbutton">Click</button>
+  </div>
+</div>
+<!-- end popups -->
+
+<!-- canva for svg downloading -->
+<canvas id="canvas" style="display:none;"></canvas>
+<!-- end of canva -->
+
+  <script src="jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="jquery.popupoverlay.min.js" charset="utf-8"></script>
+  <script src="popup_toggle.js" charset="utf-8"></script>
+  <script src="color.js" charset="utf-8"></script>
+  <script src="download.js" charset="utf-8"></script>
   </body>
 </html>
