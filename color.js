@@ -69,7 +69,6 @@ function cleanMap(worldmap){
 
 $('#svg').ready(function(){
   var worldmap = svg.contentDocument;
-  console.log(worldmap);
 
     $('#send').click(function() {
       cleanMap(worldmap);
@@ -78,4 +77,9 @@ $('#svg').ready(function(){
 		setColor(j, worldmap);
     });
 
+});
+
+$('#clear').click(function () {
+	var worldmap = svg.contentDocument;
+	cleanMap(worldmap);
 });
