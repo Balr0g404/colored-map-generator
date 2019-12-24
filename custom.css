@@ -49,3 +49,10 @@
   transition: .8s cubic-bezier(.2,1,.2,1);
   cursor: pointer;
 }
+
+.dropzone {
+border: 2px dashed #599fd9;
+border-radius: 5px;
+margin: 5px;
+background: white;
+}

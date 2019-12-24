@@ -4,8 +4,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../dropzone/min/basic.min.css">
+    <link rel="stylesheet" href="../dropzone/min/dropzone.min.css">
+    <link rel="stylesheet" href="custom.css">
 
     <title>Map Generator</title>
   </head>
@@ -17,7 +19,7 @@
     <div class="media d-flex align-items-center"><img src="img/terre.jpg" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
       <div class="media-body">
         <h4 class="m-0">Colored map</h4>
-        <p class="font-weight-light text-muted mb-0">auto-generated</p>
+        <p class="font-weight-light text-muted mb-0">By <i>Balr0g404</i></p>
       </div>
     </div>
   </div>
@@ -100,11 +102,15 @@
 </div>
 
 <div id="popup2">
-  <div class="mypop" id="pop">
-    <div class="text">
-      <textarea class="txt" name="name" rows="8" cols="80"></textarea>
+  <div class="mypop row" id="pop">
+    <div id="drop col-lg-12" class="drop_zone needsclick dz-clickable">
+      <form id="myDrop" class="dropzone fileuploader" method="post" action="index.html"></form>
     </div>
-    <button type="button" name="button" class="bbutton">Click</button>
+    <div class="row">
+      <div class="col-lg-12">
+        <button id="sendjson" type="button" name="button" class="bbutton">Click</button>
+      </div>
+    </div>
   </div>
 </div>
 <!-- end popups -->
@@ -118,5 +124,7 @@
   <script src="popup_toggle.js" charset="utf-8"></script>
   <script src="color.js" charset="utf-8"></script>
   <script src="download.js" charset="utf-8"></script>
+  <script src="../dropzone/min/dropzone.min.js" charset="utf-8"></script>
+  <script src="dragdrop.js" charset="utf-8"></script>
   </body>
 </html>
